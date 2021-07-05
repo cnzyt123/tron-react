@@ -1,6 +1,8 @@
+import { decodeBase58 } from 'base58'
+import { byteArray2hexStr, hexStr2byteArray } from 'hex'
 import jsSHA from 'jssha'
 import invariant from 'tiny-invariant'
-import { byteArray2hexStr, decodeBase58, hexStr2byteArray } from './utils'
+
 
 export function normalizeChainId(chainId: string | number): number {
   if (typeof chainId === 'string') {
