@@ -1,0 +1,33 @@
+{
+  "name": "tron-react",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "publish:lerna": "lerna publish",
+    "clean": "lerna clean --yes && lerna exec -- rimraf yarn.lock dist/ .rts2_cache_{cjs,esm}/",
+    "build": "lerna run build",
+    "start": "lerna run --parallel --no-bail start -- --noClean",
+    "lint": "lerna run lint --parallel",
+    "test": "lerna run test --parallel"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "lerna": "^4.0.0",
+    "react": ">=16.8",
+    "react-dom": ">=16.8",
+    "rimraf": "^3.0.1",
+    "tsdx": "^0.11.0"
+  },
+  "license": "GPL-3.0-or-later",
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 120
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cnzyt123/tron-react.git"
+  }
+}
