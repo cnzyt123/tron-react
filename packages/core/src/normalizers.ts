@@ -1,12 +1,12 @@
-import { decodeBase58 } from 'base58'
-import { byteArray2hexStr, hexStr2byteArray } from 'hex'
+import { decodeBase58 } from './base58'
+import { byteArray2hexStr, hexStr2byteArray } from './hex'
 import jsSHA from 'jssha'
 import invariant from 'tiny-invariant'
 
 
 export function normalizeChainId(chainId: string | number): number {
   if (typeof chainId === 'string') {
-    
+
     // Temporary fix until the next version of Metamask Mobile gets released.
     // In the current version (0.2.13), the chainId starts with “Ox” rather
     // than “0x”. Fix: https://github.com/MetaMask/metamask-mobile/pull/1275
