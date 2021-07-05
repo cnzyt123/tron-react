@@ -60,7 +60,7 @@ export function decodeBase58Address(base58Address: string): number[] | null {
   const checkSum1 = hash1.slice(0, 4);
 
   invariant(
-    !(checkSum[0] === checkSum1[0] &&
+    (checkSum[0] === checkSum1[0] &&
       checkSum[1] === checkSum1[1] &&
       checkSum[2] === checkSum1[2] &&
       checkSum[3] === checkSum1[3]),
