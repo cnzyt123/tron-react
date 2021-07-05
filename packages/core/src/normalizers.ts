@@ -24,7 +24,7 @@ export function normalizeChainId(chainId: string | number): number {
 
 
 export function normalizeAccount(_address: string): string {
-  invariant(typeof _address === 'string' && _address.length == 21 , `Invalid TRON address ${_address}`)
+  invariant(typeof _address === 'string' && _address.length == 34 , `Invalid TRON address ${_address}`)
   
   decodeBase58Address(_address)
 
