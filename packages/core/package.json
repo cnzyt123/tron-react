@@ -26,7 +26,8 @@
   "module": "dist/core.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "dist/utils"
   ],
   "scripts": {
     "start": "tsdx watch",
