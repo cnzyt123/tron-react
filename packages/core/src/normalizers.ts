@@ -7,7 +7,7 @@ import invariant from 'tiny-invariant'
 export function normalizeChainId(chainId: string | number): number {
   if (typeof chainId === 'string') {
 
-    
+
     // Temporary fix until the next version of Metamask Mobile gets released.
     // In the current version (0.2.13), the chainId starts with “Ox” rather
     // than “0x”. Fix: https://github.com/MetaMask/metamask-mobile/pull/1275
@@ -24,7 +24,7 @@ export function normalizeChainId(chainId: string | number): number {
 
 
 export function normalizeAccount(_address: string): string {
-  invariant(typeof _address === 'string' && _address.length == 21 , `Invalid address ${_address}`)
+  invariant(typeof _address === 'string' && _address.length == 21 , `Invalid TRON address ${_address}`)
   
   decodeBase58Address(_address)
 
